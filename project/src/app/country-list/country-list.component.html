@@ -1,0 +1,28 @@
+<p>country-list works!</p>
+<div>
+    <label>Enter Country Name:</label>
+    <input #CountryTxtfld>
+    <button (click)="onSave(CountryTxtfld.value)">Save</button>
+</div>
+<div *ngIf="togglelist">
+    <h2>List of countries</h2>
+    <ul [class.c2]="hasTableClass">
+        <li *ngFor="let country of countries">{{country}}</li>
+
+    </ul>
+</div>
+
+
+<div>
+    <table [class.c1]="hasTableClass">
+        <tr *ngFor="let country of countries"><td>{{country}}</td></tr>
+    </table>
+</div>
+
+<div>
+    <select [class]="myclasses">   
+        <option *ngFor="let country of countries" value="{{country}}">{{country}}</option>
+    </select>
+</div>
+<p><button (click)="onToggle()">{{togglelist?'Hide List':'Show List'}}</button></p>
+<p><button (click)="onChange()">Change</button></p>

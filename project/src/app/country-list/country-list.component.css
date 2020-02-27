@@ -1,0 +1,15 @@
+table,tr,td{
+  border: 2px solid black;  
+}
+
+.c1{
+  background-color:violet;
+  transition: 5s;
+}
+
+.c2{
+  color: darksalmon;
+  font-style: italic;
+  transition: 5s;
+}
+
